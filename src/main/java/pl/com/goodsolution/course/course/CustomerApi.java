@@ -3,6 +3,8 @@ package pl.com.goodsolution.course.course;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
+import pl.com.goodsolution.course.course.movies.Movie;
+import pl.com.goodsolution.course.course.movies.MovieService;
 
 
 import java.util.Collections;
@@ -16,9 +18,11 @@ public class CustomerApi {
     private static final Logger log = LoggerFactory.getLogger(CustomerApi.class);
 
     private final CustomerService customerService;
+    private final MovieService movieService;
 
-    public CustomerApi(CustomerService customerService) {
+    public CustomerApi(CustomerService customerService, MovieService movieService) {
         this.customerService = customerService;
+        this.movieService = movieService;
     }
 
 
@@ -99,5 +103,6 @@ public class CustomerApi {
         Collections.addAll(setOfHeights,heights);
         return customerService.findCustomerBySetOfHeights(setOfHeights);
     }
+
 
 }
