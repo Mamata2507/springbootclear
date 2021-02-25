@@ -35,4 +35,12 @@ public class Movie {
     public Long getGenreId() {
         return genreId;
     }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setGenreId(Long genreId) {
+        this.genreId = genreId;
+    }
 }
