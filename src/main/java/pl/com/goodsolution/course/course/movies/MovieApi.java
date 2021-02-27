@@ -1,7 +1,6 @@
 package pl.com.goodsolution.course.course.movies;
 
 import org.springframework.web.bind.annotation.*;
-import pl.com.goodsolution.course.course.Customer;
 
 import java.util.List;
 
