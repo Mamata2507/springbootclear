@@ -13,10 +13,10 @@ public interface MovieRepository extends CrudRepository<Movie, Long> {
     List<Movie> findByTitleAndGenreId(String title, Long genreId);
 
     @Modifying
-    @Query("DELETE FROM Movie m WHERE m.id = :id")
-    void deleteMovieById(@Param("id") Long id);
+    @Query("DELETE FROM Movie m WHERE m.movieId = :movieId")
+    void deleteMovieById(@Param("movieId") Long id);
 
     @Modifying
     @Query("UPDATE Movie m SET m.title = :title, m.genreId = :genreId WHERE m.movieId = :movieId")
-    void updateMovie(@Param("movieId") Long id, @Param("title") String title, @Param("genreId") Long genreId);
+    void updateMovie(@Param("movieId") Long movieId, @Param("title") String title, @Param("genreId") Long genreId);
 }

@@ -16,5 +16,5 @@ public interface GenreRepository extends CrudRepository<Genre, Long> {
 
     @Modifying
     @Query("UPDATE Genre g SET g.name = :name WHERE g.genreId = :genreId")
-    void update(@Param("genreId") Long id, @Param("name") String title);
+    void update(@Param("genreId") Long genreId, @Param("name") String name);
 }
