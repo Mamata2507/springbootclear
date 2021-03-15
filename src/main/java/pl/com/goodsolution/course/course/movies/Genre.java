@@ -13,6 +13,9 @@ public class Genre {
     @Column(name="name")
     private String name;
 
+    @OneToMany(mappedBy = "genre")
+    private Movie movie;
+
     public Genre(String name) {
         this.name = name;
     }

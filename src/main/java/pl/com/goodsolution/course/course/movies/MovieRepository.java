@@ -19,4 +19,6 @@ public interface MovieRepository extends CrudRepository<Movie, Long> {
     @Modifying
     @Query("UPDATE Movie m SET m.title = :title, m.genreId = :genreId WHERE m.movieId = :movieId")
     void updateMovie(@Param("movieId") Long movieId, @Param("title") String title, @Param("genreId") Long genreId);
+
+
 }
