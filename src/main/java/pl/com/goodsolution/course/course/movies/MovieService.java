@@ -54,4 +54,9 @@ public class MovieService {
 //        movieFromDb.setGenreId(movie.getGenreId());
 //        movieRepository.save(movieFromDb);
     }
+//do omówienia
+//    @Transactional
+//    public void update(Long id, Movie movie){
+//        movieRepository.updateMovie(id, movie.getTitle(), movie.getGenreId());
+//    }
 }
