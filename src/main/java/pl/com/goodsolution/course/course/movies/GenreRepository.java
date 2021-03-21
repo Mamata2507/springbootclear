@@ -12,7 +12,7 @@ public interface GenreRepository extends CrudRepository<Genre, Long> {
 
     @Modifying
     @Query("DELETE FROM Genre g WHERE g.genreId = :genreId")
-    void deleteGenreById(@Param("genreId") Long id);
+    void deleteGenreById(@Param("genreId") Long genreId);
 
     @Modifying
     @Query("UPDATE Genre g SET g.name = :name WHERE g.genreId = :genreId")
