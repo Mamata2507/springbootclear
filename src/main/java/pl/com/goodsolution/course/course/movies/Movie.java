@@ -15,8 +15,6 @@ public class Movie {
     @Column(name="genre_id")
     private Long genreId;
 
-    @ManyToOne
-    private Genre genre;
 
     public Movie(String title, Long genreId) {
         this.title = title;
